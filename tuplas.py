@@ -103,6 +103,24 @@
 # #print(min(t))
 
 #cadena-tupla tuple (manejarle el tipo de dato) casting
-dia="lunes"
-tupla=tuple(dia)
-print(tupla)
+#los cambios no son permitidos, incluyendo reemplazar datos
+# dia="lunes"
+# tupla=tuple(dia)
+# print(tupla)
+
+
+#cree una tupla con los meses de año, pida un valor(hasta que ingrese el que es) al usuario si esta entre los elementos
+#de la tupla imprima el contenido sino imprima un mensaje de error
+# meses=("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre")
+# bandera=True
+# while bandera:
+#     valor=int(input("Ingrese un valor:"))
+#     if valor>0 and valor<=len(meses):
+#         print(meses[valor-1])
+#         bandera=False
+#     else:
+#         print("ingrese otro valor")
+
+#tuple map(tipo de datos(casting),input())
+
+numero=tuple(map(int,input("Valores: ")))
