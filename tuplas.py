@@ -123,4 +123,110 @@
 
 #tuple map(tipo de datos(casting),input())
 
-numero=tuple(map(int,input("Valores: ")))
+# deli=input()
+# numeros=tuple(map(int,input("Valores: ").split(deli)))
+# print(numeros)
+
+# #listas(Array) [, , , ,] mutables(cambiar su tamaño) heterogeneos u homogeneos..identificador=[lista]
+# lista=[] #vacia
+# lista1=[1,2,3,4,5,6] #homogenea
+# print(lista1[10])
+# lista2=["a","b",["c","d"],1,2,3] #heterogenea #posiciones 0-cantidad-1
+# print(lista2[2])
+# lista3=[lista1,lista2] #listas anidadas
+# print(lista3)
+# print(lista3[1][2][0])
+# print(lista1[0])
+# #Operadores
+# #+Concatenar o juntar
+# lista4=lista1+lista2
+# print(lista4)
+# print(lista4[11])
+# #metodo juntar una lista con otra extend(agregar al final) listaextendida.metodo(listafinal)
+# lista1.extend(lista2)
+# lista1.extend(lista4)
+# print(lista1)
+# print(lista1[10])
+# #Repetir *
+# lista5=lista2*3
+# print(lista5)
+# #Operadores Relacionales > < >= <= == !=
+# print(["martes",10]>["miercoles",11])
+# print(["miercoles",10]<["miercoles",11])
+# print(["azul",345,456]!=["azul","345","456"])
+# #Subindice
+# print(lista5[-4])
+# print(lista5[::-1])
+
+#condicionales
+# numeros=[10,20,30,40,50,60,70,80,90,100]
+# busqueda=int(input("ingrese numero buscado"))
+# if busqueda in numeros: #if busqueda not in numeros
+#   print("Si esta")
+# else:
+#   print("No esta")
+
+# #ciclos (iteracion, relleno(creacion de la lista) de las listas)
+# for i in numeros:
+#   print(i, end=" ")
+
+# for j in range(0,len(numeros)):
+#   print(numeros[j], end=" ")
+
+# #ingresados por el usuario
+# ingreso=[]
+# cantidad=int(input("cantidad"))
+# for i in range(0,cantidad):
+#   valor=int(input("valor"))
+#   #append(agregar valor al final de la lista)
+#   ingreso.append(valor)
+# print(ingreso)
+
+# #ingreso valores a una lista con valor inicial
+# #nombre de la lista=[instruccion(operaciones) ciclo rango]
+# ingreso1=[2**j for j in range(2,6)] #=asignacion ingreso[j]=2**j
+# print(ingreso1)
+
+# #asignaciones multiple
+# multiple=[4,5,6]
+# n1,n2,n3=multiple
+# print(n1,n2,n3)#asignacion de la lista
+# ciclo=[1,2,3,4,5,6,7,8,9,10] #ciclo [instruccion(lista[posicion]) ciclo (posiciones)]
+# p1,p2=[ciclo[k] for k in(4,8)]
+# print(p1,p2)
+# r1,r2,r3,r4,r5=[ciclo[h] for h in range(0,10,2)]
+# print(r1,r2,r3,r4,r5)
+
+#descendente 3 valores
+def descendente(n1,n2,n3):
+  if n1>n2 and n1>n3:
+    mayor=n1
+    if n2>n3:
+      medio=n2
+      peque=n3
+    else:
+      medio=n3
+      peque=n2
+  elif n2>n3 and n2>n1:
+    mayor=n2
+    if n3>n1:
+      medio=n3
+      peque=n1
+    else:
+      medio=n1
+      peque=n3
+  else:
+    mayor=n3
+    if n2>n1:
+      medio=n2
+      peque=n1
+    else:
+      medio=n1
+      peque=n2
+  return mayor,medio,peque
+
+v1=int(input("Valor 1: "))
+v2=int(input("Valor 2: "))
+v3=int(input("Valor 3: "))
+may,med,pe= descendente(v1,v2,v3)
+print("el Mayor",may, "el Medio",med, "El peque",pe)
