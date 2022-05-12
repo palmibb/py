@@ -198,35 +198,95 @@
 # print(r1,r2,r3,r4,r5)
 
 #descendente 3 valores
-def descendente(n1,n2,n3):
-  if n1>n2 and n1>n3:
-    mayor=n1
-    if n2>n3:
-      medio=n2
-      peque=n3
-    else:
-      medio=n3
-      peque=n2
-  elif n2>n3 and n2>n1:
-    mayor=n2
-    if n3>n1:
-      medio=n3
-      peque=n1
-    else:
-      medio=n1
-      peque=n3
-  else:
-    mayor=n3
-    if n2>n1:
-      medio=n2
-      peque=n1
-    else:
-      medio=n1
-      peque=n2
-  return mayor,medio,peque
+# def descendente(n1,n2,n3):
+#   if n1>n2 and n1>n3:
+#     mayor=n1
+#     if n2>n3:
+#       medio=n2
+#       peque=n3
+#     else:
+#       medio=n3
+#       peque=n2
+#   elif n2>n3 and n2>n1:
+#     mayor=n2
+#     if n3>n1:
+#       medio=n3
+#       peque=n1
+#     else:
+#       medio=n1
+#       peque=n3
+#   else:
+#     mayor=n3
+#     if n2>n1:
+#       medio=n2
+#       peque=n1
+#     else:
+#       medio=n1
+#       peque=n2
+#   return mayor,medio,peque
 
-v1=int(input("Valor 1: "))
-v2=int(input("Valor 2: "))
-v3=int(input("Valor 3: "))
-may,med,pe= descendente(v1,v2,v3)
-print("el Mayor",may, "el Medio",med, "El peque",pe)
+# v1=int(input("Valor 1: "))
+# v2=int(input("Valor 2: "))
+# v3=int(input("Valor 3: "))
+# may,med,pe= descendente(v1,v2,v3)
+# print("el Mayor",may, "el Medio",med, "El peque",pe)
+
+#metodos y funciones
+# numerostodos=[1,2,3,4,5,6,7,8,9,10]
+# #len: cantidad de elementos de la lista
+# print("Elementos",len(numerostodos))
+# #cambiar elementos de una lista
+# numerostodos[5]=11
+# numerostodos[9]=22
+# numerostodos[3]=15
+# numerostodos[-2]=32
+# print(numerostodos)
+# #Agregar elementos o insertar append(agregar al final) insert(posicion,valor)
+# numerostodos.insert(0,34)
+# numerostodos.insert(6,"a")
+# numerostodos.insert(7,22)
+# print(numerostodos)
+# #eliminar (remove) primera aparicion del elemento clear(todo) pop(posicion)
+# numerostodos.remove(22)
+# print(numerostodos)
+# borrado=numerostodos.pop(11)
+# print(borrado)
+# print(numerostodos)
+
+# #reto3 
+# impresion=[1,2,3,4,5]
+# for i in impresion:
+#   print(i, end=" ")
+
+#reto 3 convertir a lista
+# lista=list(map(int,input().split(",")))
+# print(lista)
+
+#Metodos o funciones
+# multiplos=[10,20,60,40,50,60,70,90,90]
+# #Sublistas [valor inicial:valorfinal-1:incremento]
+# print(multiplos[:5])
+# print(multiplos[1:7])
+# print(multiplos[::-1])
+# print(multiplos[5:5])
+# print(multiplos[5:12])
+# #count: contar la cantidad de veces que se repite un valor
+# print(multiplos.count(60))
+# #index encontrar la primera ocurrencia del valor
+# print(multiplos.index(60))
+# #max y min lista
+# print(max(multiplos))
+# print(min(multiplos))
+# #Ordenar : organizarla menor a mayor o de mayor a menor sort sobre la misma lista
+# multiplos.sort()
+# print(multiplos)
+# multiplos.sort(reverse=True)
+# print(multiplos)
+
+#cadena en una lista(list)
+cadena="Hoy es miercoles"
+listaconver=list(cadena)
+print(listaconver)
+tupla=(1,2,3,4)
+listaconver1=list(tupla)
+print(listaconver1)

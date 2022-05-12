@@ -27,3 +27,18 @@
 
 # B B B B B B A A S P J I I R R F F F F F B         B A S P J I R F B
 #                                                   6 2 1 1 1 2 2 5 1
+
+equipo_a=input()
+equipo_b=input()
+sum1=0
+for j in urna:
+  if j in equipo_a:
+    sum1+=1
+  if j in equipo_b:
+    sum2+=1
+  if sum1>sum2:
+    print("A",end="")
+  elif sum2>sum1:
+    print("B",end="")
+  else:
+    print("E",end="")
