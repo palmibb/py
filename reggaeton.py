@@ -1,6 +1,6 @@
 import random
 
-sujetos = ["mami", "bebé", "princess" , "mami"]
+sujetos = ["Kania", "bebé", "princess" , "mami"]
 intenciones = ["yo quiero", "yo puedo", "yo vengo a", "voy a"]
 verbos = ["encendelte", "amalte", "ligal", "jugal"]
 advs = ["suave", "lento", "lápido", "fuelte"]

@@ -14,12 +14,6 @@
 # La salida consta de dos líneas: dos líneas, la primera deberá ser la inicial de los jugadores que anotaron gol y en la segunda línea se debe
 # imprimir el conteo de goles consecutivos por un mismo jugador. Las dos lineas separados ppor espacios.
 
- 
-
- 
-
- 
-
 # EJEMPLOS:
 # Entrada                                           Salida
 # F E I E E P P S S E                               F I E P S E
@@ -28,17 +22,18 @@
 # B B B B B B A A S P J I I R R F F F F F B         B A S P J I R F B
 #                                                   6 2 1 1 1 2 2 5 1
 
-equipo_a=input()
-equipo_b=input()
-sum1=0
-for j in urna:
-  if j in equipo_a:
-    sum1+=1
-  if j in equipo_b:
-    sum2+=1
-  if sum1>sum2:
-    print("A",end="")
-  elif sum2>sum1:
-    print("B",end="")
-  else:
-    print("E",end="")
+from itertools import groupby;
+
+x=input()
+y=x.split()
+z=[]
+t=len(y)
+z.append(y[0])
+for i in range(t):
+    if(i-1 != -1):
+        if(y[i-1] != y[i]):
+            z.append(y[i])
+print(" ".join(map(str,z)));
+
+c=[sum(1 for _ in g)for _, g in groupby(y)]
+print(" ".join(map(str,c)));
